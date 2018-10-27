@@ -1,0 +1,8 @@
+---
+- include: tg.yml
+  when: lc_asg.tg is defined
+- include: ecs.yml
+  when: lc_asg.ecs is defined
+- include: lc-asg.yml
+- include: alb.yml
+  when: lc_asg.alb is defined
